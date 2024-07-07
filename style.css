@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global Reset and Basic Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+body {
+    background-color: #f0ece7; /* Warm background color */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.title {
+    font-size: 3rem;
+    color: #6d402b; /* Dark brown title color */
+    margin-bottom: 20px;
+    animation: slideInTop 0.5s ease-in-out; /* Slide-in animation */
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #b97753; /* Warm brown border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out; /* Scale on hover */
+}
+
+canvas:hover {
+    transform: scale(1.02);
+}
+
+.toolbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    animation: slideInBottom 0.5s ease-in-out; /* Slide-in animation */
+}
+
+@keyframes slideInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.toolbox > * {
+    background-color: #b97753; /* Warm brown buttons */
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 50px;
+    width: 80px;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Button animations */
+}
+
+.toolbox > *:hover {
+    background-color: #a5694f; /* Darker brown on hover */
+    transform: scale(1.1); /* Scale on hover */
+}
+
+.toolbox > *:active {
+    transform: scale(0.9); /* Scale on click */
+}
+
+input[type="color"] {
+    appearance: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#clear {
+    background-color: #e74c3c; /* Red clear button */
+}
+
+#clear:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
